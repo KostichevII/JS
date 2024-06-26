@@ -1,0 +1,80 @@
+<html> 
+    <head>
+        <script language="JavaScript">
+            function Check (params) {
+                name=document.forms[0].YourName.value
+                password=document.forms[0].Password.value
+                passconf=document.forms[0].PasswordConfirm.value
+                mail=document.forms[0].Email.value
+                theme=document.forms[0].Theme.value
+                message=document.forms[0].Message.value
+
+                if(name==""){
+                    alert("Введите имя")
+                    document.forms[0].YourName.focus()
+                    return false
+                }
+                if(password.length<5){
+                    alert("Пароль не должен быть меньше 5 символов")
+                    document.forms[0].Password.focus()
+                    return false
+                }
+                if(passconf!=password){
+                    alert("Пароли не совпадают")
+                    document.forms[0].PasswordConfirm.focus()
+                    return false
+                }
+                if(mail.length==0){
+                    alert("Введите E-mail")
+                    document.forms[0].Email.focus()
+                    return false
+                }
+                if(mail.indexOf('@') == -1){
+                    alert("Введите E-mail")
+                    document.forms[0].Email.focus()
+                    return false
+                }
+                if(message.length <= 10){
+                    alert("Длина сообщения должна быть больше 10 символов")
+                    document.forms[0].Message.focus()
+                    return false
+                }
+                return true
+            }
+        </script> 
+        <title>Упражнение 14 </title> 
+    </head> 
+    <body> 
+
+    <form style="line-height: 2;" >
+        Ваше имя:*<input name="YourName" type="text">
+        </input>
+        <br>
+   
+        Пароль:*<input name="Password" type="password">
+        </input>
+        <br>
+   
+        Подтверждение пароля:*<input name="PasswordConfirm" type="password">
+        </input>
+        <br>
+    
+        Электронный адрес:*<input name="Email" type="text">
+        </input>
+        <br>
+
+        Тема сообщения:<input name="Theme" type="text">
+        </input>
+        <br>
+
+        Сообщение:<textarea name="Message" rows="10" cols="50">
+        </textarea>
+        <br>
+
+        <input name="Send" type="button" value="Отправить" width="200" height="100" onmousedown="return Check()">
+        <input name="Reset" type="button" value="Очистить" width="200" height="100">
+        <br>
+        *-необходимые для заполнения поля
+    </form>
+    </body> 
+</html>
