@@ -1,0 +1,20 @@
+<html> 
+<head> 
+<title>Упражнение 13 </title> 
+</head> 
+<body> 
+<script language="JavaScript">
+function SizeUp () {
+    var img =document.getElementById("img")
+    img.style.height="1000"
+    img.style.width="600"
+}
+function SizeDown(){
+    var img =document.getElementById("img")
+    img.style.height="300"
+    img.style.width="500"
+}
+</script>
+</body> 
+<img src="img3.jpg" id="img" onMouseover="SizeUp()"; onmouseout="SizeDown()" width="500" height="300">
+</html>
