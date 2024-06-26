@@ -1,0 +1,17 @@
+<html> 
+<head> 
+<title>array</title> 
+</head> 
+<body> 
+<script language="JavaScript"> 
+year=new Array("декабрь","январь","февраль","март","апрель","май", 
+"июнь","июль","август","сентябрь","октябрь","ноябрь"); 
+summer=new Array(); //летние месяцы
+summer=year.slice(6,9); 
+document.write(summer+"<br>"); 
+subjects=new Array("физика","алгебра","геометрия","русский язык","литература","обществознание")
+document.writeln("Точные науки:"+subjects.slice(0,3)+"<br>");
+document.writeln("Гуманитарные науки:"+subjects.slice(3,6)+"<br>");
+</script> 
+</body> 
+</html>
